@@ -9,6 +9,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     static: './src',
+    open: true
   },
   module: {
     rules: [

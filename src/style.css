@@ -1,9 +1,7 @@
 body {
-    background-image: url('./bg.png');
-    background-size: cover;
-    height: 100vh;
     padding: 0px;
     margin: 0px;
+    background-color: beige;
 }
 
 .header {
@@ -17,7 +15,8 @@ button {
     margin: 10px;
     padding: 5px 13px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: none;
+    box-shadow: 0 0 10px rgba(131, 110, 110, 0.3);
     transition: transform 0.2s ease;
 }
 
@@ -25,3 +24,59 @@ button:hover {
     transform: scale(1.1);
 }
 
+.dish1, .dish2, .dish3 {
+  height: 300px;
+  width: 320px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(131, 110, 110, 0.3);
+}
+
+.outer {
+    border-radius: 12px;
+    height: 500px;
+    width: 320px;
+    background-color: white;
+    display: flex;
+    justify-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.outer:hover {
+    transform: translateY(-10px);
+}
+
+.outer .name {
+    margin-top: 50px;
+    font-size: 170%;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(99, 26, 26);
+}
+.outer .description {
+    color: rgb(100, 87, 87);
+    font-style: italic;
+}
+
+.dishes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    color: rgb(99, 26, 26);
+}
+
+.about-exp {
+    width: 600px;
+    text-align: center;
+}
