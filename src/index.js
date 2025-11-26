@@ -2,6 +2,7 @@ import './style.css';
 import fries from './fries.png';
 import nuggets from './nuggets.png';
 import tacos from './taco.png';
+import main from './fry.png';
 
 let content = document.createElement("div");
 content.classList.add("content");
@@ -28,14 +29,40 @@ function clearContent () {
     content.innerHTML = "";
     content.appendChild(nav);
 }
-
-home.addEventListener("click", () => {
+function createHomeContent () {
 
 clearContent(); 
 
+let mainHeading = document.createElement("div");
+mainHeading.classList.add("mainHeading");
+
+let left = document.createElement("div");
+left.classList.add("left");
+left.innerHTML = "INDULGE IN EVERY BITE <br> AT MAT'AM";
+let caption = document.createElement("p");
+caption.classList.add("caption");
+caption.innerHTML = "Where every dish tells a story <br> and every bite is a journey of taste."
+
+let right = document.createElement("div");
+right.classList.add("right");
+let img = document.createElement("img");
+img.src = main; 
+img.classList.add("hero-image"); 
+right.appendChild(img);
+
+left.appendChild(caption);
+mainHeading.appendChild(left);
+mainHeading.appendChild(right);
+content.appendChild(mainHeading);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    createHomeContent();
 })
 
-
+home.addEventListener("click", () => {
+    createHomeContent();
+})
 
 menu.addEventListener("click", () => {
 
@@ -122,7 +149,7 @@ about.addEventListener("click", ()  => {
     heading.classList.add("about-heading");
 
     let exp = document.createElement("p");
-    exp.textContent = "Welcome to WHATEVER, where every dish is made fresh with love. Our crispy fries, tender nuggets and flavorful tacos are crafted to delight every taste bud. Come enjoy a cozy dining experience with us!";
+    exp.textContent = "Welcome to Mat'am, where every dish is made fresh with love. Our crispy fries, tender nuggets and flavorful tacos are crafted to delight every taste bud. Come enjoy a cozy dining experience with us!";
     exp.classList.add("about-exp");
 
     about.appendChild(heading);

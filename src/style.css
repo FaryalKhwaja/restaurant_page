@@ -1,27 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
 body {
     padding: 0px;
     margin: 0px;
-    background-color: beige;
+    background-color: rgb(231, 231, 189);
 }
 
 .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 20px;
-    gap: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-bottom: 1px solid rgb(77, 70, 70);
 }
 
 button {
     margin: 10px;
-    padding: 5px 13px;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 0 10px rgba(131, 110, 110, 0.3);
+    background-color: rgb(231, 231, 189);
+    color: rgb(99, 26, 26);
+    font-weight: bold;
     transition: transform 0.2s ease;
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .dish1, .dish2, .dish3 {
@@ -57,7 +63,7 @@ button:hover {
     color: rgb(99, 26, 26);
 }
 .outer .description {
-    color: rgb(100, 87, 87);
+    color: rgb(77, 15, 15);
     font-style: italic;
 }
 
@@ -73,10 +79,47 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding-top: 150px;
-    color: rgb(99, 26, 26);
+    color: rgb(77, 15, 15);
 }
 
 .about-exp {
     width: 600px;
     text-align: center;
+}
+
+.mainHeading {
+    display: flex;
+    height: 89.4vh;
+} 
+.right {
+    display: flex;
+    flex: 40%;
+    
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 60%;
+    color:rgb(46, 89, 128);
+    padding-left: 10%;
+    padding-top: 17%;
+    font-size: 300%;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Poetsen One", sans-serif;
+}
+.caption {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgb(61, 126, 184);
+}
+.right .hero-image {
+    padding-top: 100px;
+    width: 60vh;
+    height: 60vh;
+    transition: transform 0.5s ease;
+}
+.hero-image:hover {
+    transform: scale(1.1);
 }
