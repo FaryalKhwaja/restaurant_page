@@ -1,4 +1,4 @@
-import { clearContent, content } from "./main.js";
+import { clearContent, content } from "./index.js";
 
 export function createAboutContent() {
 
